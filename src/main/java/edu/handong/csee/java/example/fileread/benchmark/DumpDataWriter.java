@@ -21,7 +21,7 @@ public class DumpDataWriter {
     public static void main(String[] args) throws IOException {
         writeDumpData(input1MB, size1MB);
         writeDumpData(input10MB, size10MB);
-        writeDumpData(input100MB, size100MB);
+        //writeDumpData(input100MB, size100MB);
         //writeDumpData(input1000MB, size1000MB);
     }
 
