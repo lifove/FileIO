@@ -8,14 +8,19 @@ public class TextFileInputWithUserFileDemo {
 
 	public static void main(String[] args) {
 		TextFileInputWithUserFileDemo reader = new TextFileInputWithUserFileDemo();
-		reader.run();
+		reader.run(args);
 
 	}
 
-	private void run() {
-		System.out.print ("Enter file name: ");
-        Scanner keyboard = new Scanner (System.in);
-        String fileName = keyboard.next ();
+	private void run(String[] args) {
+        String fileName = args[0];
+        File file = new File(fileName);
+        System.out.println(file.getAbsolutePath());
+        if(!file.exists()) {
+        	System.out.println("File not exist!");
+        	System.exit(0);
+        }
+        
 		
 		Scanner inputStream = null;
 		System.out.println ("The file " + fileName + "\ncontains the following lines:\n");
@@ -32,7 +37,6 @@ public class TextFileInputWithUserFileDemo {
 			System.out.println (line);
 		}
 		inputStream.close ();
-		keyboard.close();
 	}
 
 }
