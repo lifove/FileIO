@@ -13,14 +13,9 @@ public class TextFileInputWithUserFileDemo {
 	}
 
 	private void run(String[] args) {
-        String fileName = args[0];
-        File file = new File(fileName);
-        System.out.println(file.getAbsolutePath());
-        if(!file.exists()) {
-        	System.out.println("File not exist!");
-        	System.exit(0);
-        }
+        String fileName = args[0]; // get a file path from CLI arguments
         
+        System.out.println("FileName: " + fileName);
 		
 		Scanner inputStream = null;
 		System.out.println ("The file " + fileName + "\ncontains the following lines:\n");
